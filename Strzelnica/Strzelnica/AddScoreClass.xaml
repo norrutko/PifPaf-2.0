@@ -1,0 +1,134 @@
+﻿<Window x:Class="Strzelnica.AddScore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strzelnica"
+        mc:Ignorable="d"
+        Title="Dodaj wynik" Height="640" Width="840">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <TextBox Name="NickTextBox"  Margin="5" Background="AliceBlue" Height="20" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" >
+            <ComboBox Name="Month" Margin="126,5,52.4,5" HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch">
+                <ComboBoxItem>Styczeń</ComboBoxItem>
+                <ComboBoxItem>Luty</ComboBoxItem>
+                <ComboBoxItem>Marzec</ComboBoxItem>
+                <ComboBoxItem>Kwiecień</ComboBoxItem>
+                <ComboBoxItem>Maj</ComboBoxItem>
+                <ComboBoxItem>Czerwiec</ComboBoxItem>
+                <ComboBoxItem>Lipiec</ComboBoxItem>
+                <ComboBoxItem>Sierpień</ComboBoxItem>
+                <ComboBoxItem>Wrzesień</ComboBoxItem>
+                <ComboBoxItem>Październik</ComboBoxItem>
+                <ComboBoxItem>Listopad</ComboBoxItem>
+                <ComboBoxItem>Grudzień</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="6" >
+            <ComboBox Name="ChickenPointsBox" Margin="125,5,53.4,5" HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch">
+                <ComboBoxItem>0</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="7" >
+            <ComboBox x:Name="BoarPointsBox" Margin="126,5,52.4,5" HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch">
+                <ComboBoxItem>0</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="8" >
+            <ComboBox x:Name="TurkeyPointsBox" Margin="126,5,52.4,5" HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch">
+                <ComboBoxItem>0</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="9" >
+            <ComboBox x:Name="MouflonPointsBox" Margin="126,5,52.4,5" HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch">
+                <ComboBoxItem>0</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" >
+            <Label Content="Nick" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="3" >
+            <Label Content="Wybierz miesiąc" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="5" >
+            <Label Content="Wpisz wyniki" Margin="0,3,86.4,3" HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Stretch"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="6" >
+            <Label Content="Kura" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="7" >
+            <Label Content="Dzik" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="8" >
+            <Label Content="Indyk" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="9" >
+            <Label Content="Muflon" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+
+        <Button Name="AddScoreButton" Content="Dodaj" Grid.Row="10" Grid.Column="2" Margin="3" 
+                Click="AddScoreButton_Click" />
+
+    </Grid>
+</Window>
