@@ -1,0 +1,79 @@
+﻿<Window x:Class="Strzelnica.ScoresTableClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strzelnica"
+        mc:Ignorable="d"
+        Title="Wyniki" Height="480" Width="840">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" >
+            <ComboBox Name="Month"  HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Center" Width="300">
+                <ComboBoxItem>Rok</ComboBoxItem>
+                <ComboBoxItem>Styczeń</ComboBoxItem>
+                <ComboBoxItem>Luty</ComboBoxItem>
+                <ComboBoxItem>Marzec</ComboBoxItem>
+                <ComboBoxItem>Kwiecień</ComboBoxItem>
+                <ComboBoxItem>Maj</ComboBoxItem>
+                <ComboBoxItem>Czerwiec</ComboBoxItem>
+                <ComboBoxItem>Lipiec</ComboBoxItem>
+                <ComboBoxItem>Sierpień</ComboBoxItem>
+                <ComboBoxItem>Wrzesień</ComboBoxItem>
+                <ComboBoxItem>Październik</ComboBoxItem>
+                <ComboBoxItem>Listopad</ComboBoxItem>
+                <ComboBoxItem>Grudzień</ComboBoxItem>
+                
+            </ComboBox>
+        </StackPanel>
+
+        <Button x:Name="SortButton" Content="Sortuj" Grid.Column="1" HorizontalAlignment="Left"  
+                VerticalAlignment="top" Width="75" Height="20" Grid.Row="0" Click="SortButton_Click"/>
+        
+        <ListView HorizontalAlignment="Stretch" Name="ListView1" SelectionChanged="ListView1_SelectionChanged" Grid.Row="2" Grid.ColumnSpan="2" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nick" Width ="70" DisplayMemberBinding="{Binding Nick}" />
+                    <GridViewColumn Header="Imię" Width ="70" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Nazwisko" Width ="100" DisplayMemberBinding="{Binding Surname}"/>
+                    <GridViewColumn Header="Styczeń" Width ="70" DisplayMemberBinding="{Binding Month[0]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[0]}"/>
+                    <GridViewColumn Header="Luty" Width ="70" DisplayMemberBinding="{Binding Month[1]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[1]}"/>
+                    <GridViewColumn Header="Marzec" Width ="70" DisplayMemberBinding="{Binding Month[2]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[2]}"/>
+                    <GridViewColumn Header="Kwicień" Width ="70" DisplayMemberBinding="{Binding Month[3]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[3]}"/>
+                    <GridViewColumn Header="Maj" Width ="70" DisplayMemberBinding="{Binding Month[4]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[4]}"/>
+                    <GridViewColumn Header="Czerwiec" Width ="70" DisplayMemberBinding="{Binding Month[5]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[5]}"/>
+                    <GridViewColumn Header="Lipiec" Width ="70" DisplayMemberBinding="{Binding Month[6]}"/>
+                    <GridViewColumn Header="%"  Width ="35" DisplayMemberBinding="{Binding MonthPercentage[6]}"/>
+                    <GridViewColumn Header="Sierpień"  Width ="70" DisplayMemberBinding="{Binding Month[7]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[7]}"/>
+                    <GridViewColumn Header="Wrzesień" Width ="70" DisplayMemberBinding="{Binding Month[8]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[8]}"/>
+                    <GridViewColumn Header="Październik" Width ="70" DisplayMemberBinding="{Binding Month[9]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[9]}"/>
+                    <GridViewColumn Header="Listopad" Width ="70" DisplayMemberBinding="{Binding Month[10]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[10]}"/>
+                    <GridViewColumn Header="Grudzień" Width ="70" DisplayMemberBinding="{Binding Month[11]}"/>
+                    <GridViewColumn Header="%" Width ="35" DisplayMemberBinding="{Binding MonthPercentage[11]}"/>
+                    <GridViewColumn Header="SUMA" Width ="70" DisplayMemberBinding="{Binding TotalScore}"/>
+                    <GridViewColumn Header="SUMA[%]" Width ="70" DisplayMemberBinding="{Binding TotalScorePercentage}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+    </Grid>
+</Window>
