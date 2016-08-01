@@ -1,0 +1,39 @@
+﻿<Window x:Class="Strzelnica.AddPersonClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strzelnica"
+        mc:Ignorable="d"
+        Title="Dodawanie osoby" Height="480" Width="640">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" >
+            <TextBox Name="NickTextBox"  Margin="5" Background="AliceBlue" Height="20"  />
+            <TextBox Name="NameTextBox" Margin="5" Background="AliceBlue" Height="20" />
+            <TextBox Name="SurnameTextBox" Margin="5" Background="AliceBlue" Height="20"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" >
+            <Label Content="Nick" Margin="3" HorizontalAlignment="Right"/>
+            <Label Content="Imię" Margin="3" HorizontalAlignment="Right"/>
+            <Label Content="Nazwisko" Margin="3" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <Button Name="AddPersonButton" Content="Dodaj" Grid.Row="1" Grid.Column="2" Height="30" 
+                Width="100" VerticalAlignment="Top" Margin="20" Click="AddPersonButton_Click" />
+        <Button x:Name="DeletePersonButton" Content="Usuń" Grid.Row="1" Grid.Column="2" Height="30"
+                Width="100" VerticalAlignment="Bottom" Margin="20" Click="DeletePersonButton_Click"/>
+    </Grid>
+</Window>

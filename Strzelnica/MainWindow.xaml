@@ -1,0 +1,50 @@
+﻿<Window x:Class="Strzelnica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strzelnica"
+        mc:Ignorable="d"
+        Title="PIF-PAF 2.0" Height="480" Width="640">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label  Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right">Zawody</Label>
+        <Slider Name="Mode" Maximum="1" TickFrequency="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" 
+                ValueChanged="Mode_ValueChanged" Margin="1.4,37,97,37.4" Grid.ColumnSpan="2" IsSnapToTickEnabled="True"/>
+        <Label  Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left">Liga</Label>
+        <TextBlock Name="StringMode"  Text="Zawody" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+        <TextBlock Name="StringWeapon" Text="Pistolet" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+        <Label  Grid.Column="4" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right">Pistolet</Label>
+        <Slider Name="Weapon" Maximum="1" TickFrequency="1" Grid.Column="5" Grid.RowSpan="2" VerticalAlignment="Center" 
+                ValueChanged="Weapon_ValueChanged"
+                IsSnapToTickEnabled="True"/>
+        <Label  Grid.Column ="6" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left">Karabin</Label>
+        <Button Name="Scores" Grid.Row="2" Grid.ColumnSpan="7" Margin="20" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Click="Scores_Click">Wyniki</Button>
+        <Button Name="AddScores" Grid.Row="3" Grid.ColumnSpan="7" Margin="20" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Click="AddScores_Click">Dodaj wynik</Button>
+        <Button Name="AddPerson" Grid.Row="4" Grid.ColumnSpan="7" Margin="20" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Click="AddPerson_Click">Dodaj/Usuń osobę</Button>
+        <Button Name="FindPerson" Grid.Row="5" Grid.ColumnSpan="7" Margin="20" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Click="FindPerson_Click">Wyszukaj osobę</Button>
+    </Grid>
+</Window>
